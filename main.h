@@ -25,6 +25,7 @@ int choice(va_list ar, char car);
 int _puts(va_list ar);
 int myputchar(va_list arg);
 int percent(va_list arg);
-int print_integer(va_list ar);
+int print_number(va_list arg);
+int numprint(int num);
 
 #endif /* MAIN_H */

@@ -12,14 +12,14 @@ int choice(va_list ar, char car)
 		{'c', myputchar},
 		{'s', _puts},
 		{'%', percent},
-		{'d', print_integer},
-		{'i', print_integer}
+		{'d', print_number},
+		{'i', print_number}
 	};
 	int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);
 
-	for (iter = 0; iter < 3; iter++)
+	for (iter = 0; iter < 5; iter++)
 	{
 		if (car == great[iter].c)
 		{

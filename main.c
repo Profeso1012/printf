@@ -19,8 +19,8 @@ int main(void)
 	 printf("String:[%s]\n", "I am a string !");
 	 printf("Len:[%d]\n", len);
 	 printf("Len:[%d]\n", len2);
-	 len3 = _printf("Length:[%d, %i]\n", len, len);
-	 len4 = printf("Length:[%d, %i]\n", len2, len2);
+	 len3 = _printf("Length:[%d, %i]\n", len, len2);
+	 len4 = printf("Length:[%d, %i]\n", len, len2);
 	 printf("Len:[%d]\n", len3);
 	 printf("Len:[%d]\n", len4);
 	 return (0);

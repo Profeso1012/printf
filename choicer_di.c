@@ -1,16 +1,13 @@
 #include "main.h"
 
 /**
- * print_integer - Prints an integer to the standard output.
- * @ar: A va_list containing the integer to print.
- *
- * Return: The number of characters printed.
+ * print_number - Print a decimal number.
+ * @arg: The va_list argument containing the number.
+ * Return: Number of characters printed.
  */
-int print_integer(va_list ar)
+int print_number(va_list arg)
 {
-	int num = va_arg(ar, int);
-	char buffer[12];
-	int count = 0, i = 0, j;
+	int num = va_arg(arg, int), count = 0;
 
 	if (num < 0)
 	{
@@ -18,19 +15,27 @@ int print_integer(va_list ar)
 		count++;
 		num = -num;
 	}
-	while (num > 0)
-	{
-		buffer[i++] = num % 10 + '0';
-		num /= 10;
-	}
-	buffer[i] = '\0';
 
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putchar(buffer[j]);
-		count++;
-	}
+
+	count += numprint(num);
+
+	return (count);	
+}
+
+/**
+ * numprint - Print an integer using recursion.
+ * @num: The integer to be printed.
+ * Return: Number of digits printed.
+ */
+int numprint(int num)
+{
+	unsigned int k = num;
+	int count = 0;
+
+	k /= 10;
+	if (k)
+		count += numprint(k);
+	count += _putchar(((unsigned int)num % 10) + '0');
 
 	return (count);
 }
-
