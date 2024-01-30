@@ -19,7 +19,7 @@ int print_number(va_list arg)
 
 	count += numprint(num);
 
-	return (count);	
+	return (count);
 }
 
 /**
