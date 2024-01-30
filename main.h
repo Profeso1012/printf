@@ -27,5 +27,7 @@ int myputchar(va_list arg);
 int percent(va_list arg);
 int print_number(va_list arg);
 int numprint(int num);
+int print_binary(va_list arg);
+int dectobin(unsigned int num);
 
 #endif /* MAIN_H */
