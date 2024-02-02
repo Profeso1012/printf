@@ -29,5 +29,14 @@ int print_number(va_list arg);
 int numprint(int num);
 int print_binary(va_list arg);
 int dectobin(unsigned int num);
+int print_unsigned(va_list arg);
+int print_octal(va_list arg);
+int print_hex(va_list arg);
+int print_HEX(va_list arg);
+int dectohex(unsigned int num, int upper);
+int dectooct(unsigned int num);
+int print_buffer(char *buffer, int size, int upper);
+int print_ascii(va_list arg);
+int print_HEX_S(va_list arg);
 
 #endif /* MAIN_H */

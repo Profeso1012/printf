@@ -1,0 +1,49 @@
+#include "main.h"
+
+/**
+ * print_ascii - print string with non-printable characters in hex format
+ * @arg: va_list argument containing the string
+ * Return: number of printed characters
+ */
+
+int print_ascii(va_list arg)
+{
+	char *str = va_arg(arg, char *);
+	int count = 0, i;
+
+	if (!str)
+		str = "(null)";
+
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] < 32 || str[i] >= 127)
+		{
+			count += _putchar('\\');
+			count += _putchar('x');
+			va_list args
+			va_start(args, format);
+			count += print_HEX_S(args);
+			va_end(args);
+		}
+		else
+		{
+			count += _putchar(str[i]);
+
+		}
+	}
+	return (count);
+}
+
+/**
+ * print_HEX_S - print unsigned int in uppercase hexadecimal format
+ * @arg: va_list argument containing the unsigned int
+ * Return: number of printed characters
+ */
+int print_HEX_S(va_list arg)
+{
+	unsigned int num = va_arg(arg, int);
+	int count = 0;
+
+	count += dectohex(num, 1);
+	return (count);
+}
