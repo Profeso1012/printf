@@ -7,12 +7,7 @@
  */
 int print_unsigned(va_list arg)
 {
-	/*unsigned int num = va_arg(arg, unsigned int);
-	int count = 0;
-
-	count += numprint(num);
-	return (count);c*/
-	return numprint(va_arg(arg, unsigned int));
+	return (numprint(va_arg(arg, unsigned int)));
 }
 
 /**
@@ -22,12 +17,7 @@ int print_unsigned(va_list arg)
  */
 int print_octal(va_list arg)
 {
-	/*unsigned int num = va_arg(arg, unsigned int);
-	int count = 0;
-
-	count += dectooct(num);
-	return (count);*/
-	return dectooct(va_arg(arg, unsigned int));
+	return (dectooct(va_arg(arg, unsigned int)));
 }
 
 /**
@@ -37,12 +27,7 @@ int print_octal(va_list arg)
  */
 int print_hex(va_list arg)
 {
-	/*unsigned int num = va_arg(arg, unsigned int);
-	int count = 0;
-
-	count += dectohex(num, 0);
-	return (count);*/
-	return dectohex(va_arg(arg, unsigned int), 0);
+	return (dectohex(va_arg(arg, unsigned int), 0));
 }
 
 /**
@@ -52,10 +37,5 @@ int print_hex(va_list arg)
  */
 int print_HEX(va_list arg)
 {
-	/*unsigned int num = va_arg(arg, unsigned int);
-	int count = 0;
-
-	count += dectohex(num, 1);
-	return (count);*/
-	return dectohex(va_arg(arg, unsigned int), 1);
+	return (dectohex(va_arg(arg, unsigned int), 1));
 }
