@@ -44,6 +44,8 @@ int main(void)
 	len = _printf("Address:[%p]\n", addr);
 	len2 = printf("Address:[%p]\n", addr);
 	printf("Length:[%d, %d]\n", len, len2);
+	_printf("Unknown:[%r]\n", "hello");
+	_printf("Unknown:[%R]\n", "hello");
 
 	return (0);
 }

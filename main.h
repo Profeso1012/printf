@@ -41,5 +41,10 @@ int print_HEX_S(va_list arg);
 int print_ptr(va_list arg);
 int print_HEX_P(unsigned long int num);
 int _strlen(const char *str);
+int print_rev_string(va_list arg);
+int print_rot13(va_list arg);
+int print_rev(char *str);
+char *rot13(char *str);
+int _rputs(char *str);
 
 #endif /* MAIN_H */
