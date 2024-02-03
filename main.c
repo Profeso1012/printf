@@ -11,8 +11,10 @@ int main(void)
 {
 	int len, len2, len3, len4;
 	unsigned int ui;
+	void *addr;
 
 	ui = (unsigned int)INT_MAX + 1024;
+	addr = (void *)0x7ffe637541f0;
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
        	_printf("Character:[%c]\n", 'H');
@@ -39,6 +41,9 @@ int main(void)
 	len4 = printf("Unsigned hexadecimal:[%X]\n", ui);
 	printf("Length:[%d, %d, %d, %d]\n", len, len2, len3, len4);
 	_printf("%S\n", "Best\nSchool");
+	len = _printf("Address:[%p]\n", addr);
+	len2 = printf("Address:[%p]\n", addr);
+	printf("Length:[%d, %d]\n", len, len2);
 
 	return (0);
 }

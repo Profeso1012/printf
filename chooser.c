@@ -18,14 +18,15 @@ int choice(va_list ar, char car)
 		{'u', print_unsigned},
 		{'o', print_octal},
 		{'x', print_hex},
-		{'X', print_HEX}
+		{'X', print_HEX},
+		{'p', print_ptr}
 		/*{'S', print_ascii}*/
 	};
 	int iter = 0;
 	int count = 0;
 	int (*func)(va_list a);
 
-	for (iter = 0; iter < 10; iter++)
+	for (iter = 0; iter < 11; iter++)
 	{
 		if (car == great[iter].c)
 		{

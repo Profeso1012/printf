@@ -38,5 +38,8 @@ int dectooct(unsigned int num);
 int print_buffer(char *buffer, int size, int upper);
 int print_ascii(va_list arg);
 int print_HEX_S(va_list arg);
+int print_ptr(va_list arg);
+int print_HEX_P(unsigned long int num);
+int _strlen(const char *str);
 
 #endif /* MAIN_H */
