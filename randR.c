@@ -44,6 +44,7 @@ int print_rot13(va_list arg)
 				rot -= 13;
 		}
 		count += _putchar(rot);
+		str++;
 	}
 	return (count);
 }
